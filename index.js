@@ -83,12 +83,17 @@ userInput.addEventListener('keyup', (e) => {
 
 const deletebutton = document.getElementById('delete');
 
-deletebutton.addEventListener('click', () => {
+deletebutton.addEventListener('click', (e) => {
   const checkedtasks = Array.from(document.querySelectorAll('input[type=checkbox]:checked'));
+  console.log(checkedtasks);
+  e.preventDefault();
   checkedtasks.forEach((task) => {
+    tasks.splice(task.id, 1);
     task.parentElement.parentElement.remove();
+   
     localStorage.setItem('Tasks', JSON.stringify(tasks));
-  });
+      });
+     
 });
 
 updateStatus();
