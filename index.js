@@ -15,10 +15,10 @@ function showTasks() {
             <p>${task.description}</p>
         </label>
         <div class="settings">
-            <img onclick="showOptions(this) "src="./images/ellipsis-v.svg" class="dots" alt="icon">
+            <img onclick="showOptions(this) "src="./images/more.png" class="dots" alt="icon">
              <ul class="task-menu">
-                <li><img onclick="editTask(${id},'${task.description}')" src="./images/editpen.svg" id="editpen" class="dots" alt="edit"></li>
-                <li><img onclick="deleteTask(${id})" src="./images/deletebin.svg" id="deletebin" class="dots" alt="delete"></li>
+                <li><img onclick="editTask(${id},'${task.description}')" src="./images/edit.png" id="editpen" class="dots" alt="edit"></li>
+                <li><img onclick="deleteTask(${id})" src="./images/delete.png" id="deletebin" class="dots" alt="delete"></li>
              </ul>
                 </div>
             </li>`;
