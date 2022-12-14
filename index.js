@@ -90,10 +90,9 @@ deletebutton.addEventListener('click', (e) => {
   checkedtasks.forEach((task) => {
     tasks.splice(task.id, 1);
     task.parentElement.parentElement.remove();
-   
+
     localStorage.setItem('Tasks', JSON.stringify(tasks));
-      });
-     
+  });
 });
 
 updateStatus();
