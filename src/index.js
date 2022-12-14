@@ -45,5 +45,10 @@ taskList.addEventListener('click', (e) => {
     visible.show(tasks.getItems());
   }
 });
-
+taskList.addEventListener('keyup', (e) => {
+  if (e.key === 'Enter') {
+    tasks.updateItem(e.target.dataset.index, 'description', e.target.value);
+    visible.show(tasks.getItems());
+  }
+});
 window.addEventListener('load', visible.show(tasks.getItems()));
