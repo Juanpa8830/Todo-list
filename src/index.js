@@ -5,6 +5,7 @@ import './styles.css';
 const taskList = document.getElementById('task-box');
 const form = document.getElementById('task_form');
 const taskInput = document.getElementById('description');
+const clearB = document.getElementById('delete');
 
 const tasks = new Methods('Tasks', JSON.parse(localStorage.getItem('Tasks')) || []);
 const visible = new ShowOnScreen(taskList);
@@ -50,5 +51,10 @@ taskList.addEventListener('keyup', (e) => {
     tasks.updateItem(e.target.dataset.index, 'description', e.target.value);
     visible.show(tasks.getItems());
   }
+});
+
+clearB.addEventListener('click', () => {
+  tasks.removeAllCompleted();
+  visible.show(tasks.getItems());
 });
 window.addEventListener('load', visible.show(tasks.getItems()));

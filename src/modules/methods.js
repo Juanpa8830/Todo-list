@@ -37,4 +37,12 @@ export default class Methods {
     };
 
     getItems = () => this.items.sort((a, b) => a.index - b.index);
+
+    removeAllCompleted = () => {
+      this.items = this.items.filter((item) => item.completed === false);
+      const newItems = this.items.map((item, index) => ({ ...item, index: index + 1 }));
+      this.items = newItems;
+      this.items.sort((a, b) => a.index - b.index);
+      localStorage.setItem(this.localStorageItem, JSON.stringify(this.items));
+    }
 }
