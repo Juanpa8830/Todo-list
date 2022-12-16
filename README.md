@@ -55,7 +55,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[click here for live-demo]()
+[click here for live-demo](https://juanpa8830.github.io/Todo-list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
