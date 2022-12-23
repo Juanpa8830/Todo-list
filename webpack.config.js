@@ -12,7 +12,7 @@ module.exports = {
   ],
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     clean: true,
   },
   module: {
@@ -33,7 +33,7 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.resolve(__dirname, 'dist'),
+      directory: path.resolve(__dirname, 'docs'),
     },
     open: true,
     hot: true,
